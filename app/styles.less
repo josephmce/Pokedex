@@ -9,6 +9,9 @@
 
 html, body{
     font-family: 'Poppins', sans-serif;
+    //background:url(Images/bg.png);
+ 
+    
 }
 
 .main{
@@ -119,14 +122,13 @@ li a:hover:not(.active) {
     }
 }
 .mainmodule{
-    background: @background-color;
-    height:auto;
-    width:90%;
-    position: relative;    
-    vertical-align:central;
+    height: auto;
+    width: 400px;
+    position: relative;
+    vertical-align: central;
     margin-top: 60px;
-    margin-left:5%;
-    margin-right:5%;
+    margin-left: auto;
+    margin-right: auto;
 }
 .gridContainer{
     background: @background-color;
@@ -151,7 +153,7 @@ li a:hover:not(.active) {
 }
 .grid-1{
     background-color:rgba(255, 255, 255, 1);
-    width:100%;
+    width:196px;
     position: relative;    
     float:left;
     border:@mainborder-info;
@@ -159,6 +161,8 @@ li a:hover:not(.active) {
     margin-right:5px;
     margin-bottom:5px;
     box-shadow: @shadow;
+    height: 186px;
+    overflow: scroll;
     &:hover{
         cursor: pointer;
     }
@@ -206,3 +210,38 @@ li a:hover:not(.active) {
     }
   }
   
+#gameboytop{
+    width:376px;
+    height:81px;
+    background:url(Images/gameboytop.png);
+}
+
+#gameboyleft{
+    height:188px;
+    background:rgb(135, 178, 218);
+    width: 90px;
+    float: left; 
+    background:url(Images/gameboyleft.png);
+}
+
+#gameboyright{
+    height:188px;
+    background:rgb(134, 72, 72); 
+    width: 90px;
+    background:url(Images/gameboyright.png);
+    margin-right: 18px;
+    float:right;
+}
+
+#gameboybottom{
+    width:376px;
+    height:359px;
+    background:rgb(207, 157, 200); 
+    background:url(Images/gameboybottom.png);
+    float: left;
+    margin-top: -3px;
+}
+.load{
+    width:60px;
+    height:60px;
+}

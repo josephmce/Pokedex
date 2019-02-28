@@ -8,7 +8,7 @@ export class Home extends React.Component {
     constructor(props) {
         super();
         this.state = {
-            results: [],
+            data1: [],
             isLoading: false
         };
     }
@@ -16,14 +16,11 @@ export class Home extends React.Component {
         this.setState({ isLoading: true });
         fetch(API)
             .then(response => response.json())
-            .then(data => this.setState({ results: data.results, isLoading: false }));
+            .then(data => this.setState({ data1: data.results, isLoading: false }));
         console.log("Component did mount!");
     }
-    onNavigateDetails() {
-        browserHistory.push("/Details");
-    }
     render() {
-        const { results, isLoading } = this.state;
+        const { data1, isLoading } = this.state;
         if (isLoading) {
             return <div className="module1">
                 <div className="mainmodule">
@@ -33,30 +30,33 @@ export class Home extends React.Component {
                         </div>
                     </div>
                 </div>
-            </div>;
-        }
+            </div>;}
         return (
-            <div className="module1">
-                <div className="mainmodule">
-                    <div className="gridContainer">
-                        <div className="grid-1" >
-                        <ul >
-                            {results.map(poke =>
-                                <li className ="list" key={poke.url}>                                       
-                                    <p id="tracks">{poke.name}</p>
-                                    <Link to={{
-                                    pathname:"/Pokemon",
-                                    state:{
+            <div className="mainmodule">
+                <div id="gameboytop">
+                </div>
+                <div id="gameboyleft">   
+                </div>
+                <div className="grid-1" >
+                    <ul >
+                        {data1.map(poke =>
+                            <li className="list" key={poke.url}>
+                                <p id="tracks">{poke.name}</p>
+                                <Link to={{
+                                    pathname: "/Pokemon",
+                                    state: {
                                         url: poke.url,
-                                        name:poke.name                                        
+                                        name: poke.name
                                     }
-                                    }} 
-                                    activeClassName="active" className="detailslink" >More Info</Link> 
-                                </li>
-                            )}
-                        </ul>
-                        </div>
-                    </div>
+                                }}
+                                    activeClassName="active" className="detailslink" >More Info</Link>
+                            </li>
+                        )}
+                    </ul>
+                </div>
+               <div id="gameboyright">
+                </div>
+                <div id="gameboybottom">  
                 </div>
             </div>
         );

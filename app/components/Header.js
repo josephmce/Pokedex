@@ -9,11 +9,9 @@ export class Header extends React.Component {
         render() {
         return(
             <div className="toprow">
-           
                 <div>
-                <p className="title">New App</p><span className="headeruserinfo"></span><span className="headeruserinfo"></span> 
+                <p className="title">Pokédex</p><span className="headeruserinfo"></span><span className="headeruserinfo"></span> 
                 </div>
-            
             </div>
         );
         }
