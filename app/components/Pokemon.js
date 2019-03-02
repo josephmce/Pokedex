@@ -76,12 +76,26 @@ export class Pokemon extends React.Component {
                 <div id="gameboyleft">
                 </div>
                 <div className="grid-1" >
-                    <p id="tracks">Name: {data2 && data2.name}</p>
-                    <img src={data2 && data2.sprites && data2.sprites.front_default}></img>
-                    <img src={data2 && data2.sprites && data2.sprites.back_default}></img>
-                    <p>Type: {data2 && data2.types && data2.types[0].type && data2.types[0].type.name} </p>
-                    <p>Weight: {data2 && data2.weight}</p>
-                    <p>Height: {data2 && data2.height}</p>
+                    <div className="pokeheader">
+                        <div className="pokeinfoheader">
+                            <p>Pokemon Info</p>
+                        </div>
+                    </div>
+                    <div className="pokecontent">
+                        <div className="pokedetails">
+                            <div className="pokenameheader">
+                                <p className="poketitlename">{data2 && data2.name}</p>
+                            </div>
+                            <div className="pokeimgcontainer">
+                                <img className ="pokemonimage" src={data2 && data2.sprites && data2.sprites.front_default}></img>
+                            </div>
+                        </div>
+                        <div className="pokeinfo">
+                            <p>Type {data2 && data2.types && data2.types[0].type && data2.types[0].type.name} </p>
+                            <p>Weight {data2 && data2.weight}</p>
+                            <p>Height {data2 && data2.height}</p>
+                        </div>
+                    </div>
                 </div>
                 <div id="gameboyright">
                 </div>

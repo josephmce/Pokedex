@@ -35,27 +35,29 @@ export class Home extends React.Component {
             <div className="mainmodule">
                 <div id="gameboytop">
                 </div>
-                <div id="gameboyleft">   
-                </div>
-                <div className="grid-1" >
-                    <ul >
-                        {data1.map(poke =>
-                            <li className="list" key={poke.url}>
-                                <p id="tracks">{poke.name}</p>
-                                <Link to={{
-                                    pathname: "/Pokemon",
-                                    state: {
-                                        url: poke.url,
-                                        name: poke.name
-                                    }
-                                }}
-                                    activeClassName="active" className="detailslink" >More Info</Link>
-                            </li>
-                        )}
-                    </ul>
-                </div>
-               <div id="gameboyright">
-                </div>
+                <div id="middlerow">
+                    <div id="gameboyleft">   
+                    </div>
+                    <div className="grid-1" >
+                        <ul >
+                            {data1.map(poke =>
+                                <li className="list" key={poke.url}>
+                                    
+                                    <Link to={{
+                                        pathname: "/Pokemon",
+                                        state: {
+                                            url: poke.url,
+                                            name: poke.name
+                                        }
+                                    }}
+                                        activeClassName="active" className="detailslink" ><p id="pokelistnames">{poke.name}</p></Link>
+                                </li>
+                            )}
+                        </ul>
+                    </div>
+                <div id="gameboyright">
+                    </div>
+                    </div>
                 <div id="gameboybottom">  
                 </div>
             </div>

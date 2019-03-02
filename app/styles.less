@@ -9,10 +9,12 @@
 
 html, body{
     font-family: 'Poppins', sans-serif;
-    //background:url(Images/bg.png);
- 
-    
+    background: url(Images/bg.png);
+    background-size: cover;
+    height: 100vh -60px;
+    background-attachment: fixed;
 }
+    
 
 .main{
     width: 100%; 
@@ -44,8 +46,8 @@ html, body{
     z-index: 99;
 }
 .main-nav {
-    list-style-type: none;
-    padding: 0;
+    list-style:none;
+    padding-left:0;
     background:url(Images/navbg.png);
     background-size:cover;
     overflow: auto;
@@ -57,6 +59,10 @@ html, body{
     font-size:24px;
     position: fixed;
     top: 0;
+}
+ul{
+    list-style:none;
+    padding-left:0;
 }
 li a {
     display: block;
@@ -152,15 +158,16 @@ li a:hover:not(.active) {
     width:218px;
 }
 .grid-1{
-    background-color:rgba(255, 255, 255, 1);
-    width:196px;
-    position: relative;    
-    float:left;
-    border:@mainborder-info;
-    vertical-align:central;
-    margin-right:5px;
-    margin-bottom:5px;
-    box-shadow: @shadow;
+    background-color: #ffffff;
+    width: 207px;
+    position: relative;
+    float: left;
+    border: 1px solid #dfdfdf;
+    vertical-align: central;
+    margin-right: -4px;
+    margin-bottom: 3px;
+    margin-left: -1px;
+    /* box-shadow: 0px 4px 4px 0px rgba(233, 240, 243, 0.5), 0 0 0 0px #E6ECF8; */
     height: 186px;
     overflow: scroll;
     &:hover{
@@ -178,20 +185,21 @@ li a:hover:not(.active) {
     border: 1px dashed @mainthemecolor2;
     padding: 1px;
     margin-top: 2px;
-    width:95%;
+    width:100%;
     &:hover{
         background-color:@mainthemecolor3;
     }
 }
 
   .detailslink{
-    font-size: 16px;
+    font-size: 12px;
     font-weight: bold;
     background: #49a8d9;
-    width: 100px;
     border-radius: 4px;
     color: white;
     text-align: center;
+    height:26px;
+    margin-top:0px;
       &:hover{
         background: @mainthemecolor2;
       }
@@ -241,7 +249,62 @@ li a:hover:not(.active) {
     float: left;
     margin-top: -3px;
 }
+#middlerow{
+    width:400px;
+}
 .load{
     width:60px;
     height:60px;
+}
+.pokeheader{
+    height:20px;
+    background:rgb(136, 187, 211);
+    font-size:11px;
+}
+.pokeinfoheader{
+    height:20px;
+    width:100px;
+    background:rgb(255, 247, 174);
+    border: 0px;
+    border-radius: 0px 6px 6px 0px;
+    
+}
+.pokecontent{
+    font-size:11px;
+    width:188px;
+    
+}
+.pokedetails{
+    width:94px;
+    float:left;
+    border:1px solid grey;
+    
+}
+.pokenameheader{
+    background:rgb(197, 152, 206);
+    color:white;
+    padding-left:2px;
+}
+.pokeimgcontainer{
+margin-top:0px;
+background: url('Images/pokebg.png');
+}
+.pokeinfo{
+    width:94px;
+    float:left;
+    padding-left:2px;
+    border:1px solid grey;
+    height:111px;
+    background: url('Images/pokeinfo.png');
+}
+.pokemonimage{
+
+}
+.poketitlename{
+    height:13px;
+    margin: 0px;
+}
+.pokelistnames{
+    margin:0px;
+    vertical-align: middle;
 }
